@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Click Counter</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 50px;
+      color: #333;
+    }
+    h1 {
+      font-size: 3rem;
+      color: #ff4081;
+      margin-bottom: 40px;
+    }
+    .counter {
+      font-size: 5rem;
+      color: #2196f3;
+      margin: 20px 0;
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 1.5rem;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background-color: #388e3c;
+    }
+  </style>
+</head>
+<body>
+  <h1>Click Counter</h1>
+  <div class="counter" id="clickCount">0</div>
+  <button onclick="increaseCount()">Click Me!</button>
+
+  <script>
+    let count = 0;
+    function increaseCount() {
+      count++;
+      document.getElementById("clickCount").textContent = count;
+    }
+  </script>
+</body>
+</html>
